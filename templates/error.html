@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+<div style="width: 70%; margin-left: 15%; margin-right: 15%; text-align: center;">
+	<img src="{{url_for('static',filename='error.png')}}">
+	<h1 style="color: red;">
+		{{error}}	
+	</h1>
+</div>
+
+
+{% endblock %}

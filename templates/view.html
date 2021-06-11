@@ -1,0 +1,42 @@
+{%extends "layout.html"%}
+{% block content %}
+<head>  
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<title> view  </title>  
+<style>   
+Body {  
+  font-family: Times New Roman;  
+  background-color: None ;  
+}  
+button {   
+       background-color: #4CAF50;   
+       width: 70%;  
+       color: white;   
+       padding: 40px;  
+       margin: 10px 0px;   
+       border: none;   
+          
+
+         }   
+ form {   
+        border: 3px solid #4CAF50;   
+    }   
+     
+ .container {   
+        padding: 25px;   
+        background-color: None;  
+    }   
+</style>   
+</head>  
+
+<body> <br><br>
+<div class="view">
+    <form>  
+        <div class="col-8"><br><br>
+          <center><button type="submit" class="btn btn-primary"><a class="nav-link"  href="{{ url_for('add') }}"><font color="white" size="5">Add Questions</button></a></center>
+          <center><button type="submit" class="btn btn-primary"><a class="nav-link"  href="{{ url_for('view') }}"><font color="white" size="5">View questions</button></a></center>
+          </a></center>   <br><br>
+        </div>   
+    </form>  </body>
+
+{%endblock%}

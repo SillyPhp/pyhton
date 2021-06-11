@@ -1,0 +1,387 @@
+{{ url_for('home') }}
+
+div.home {
+  padding: 10px 0 30px 0;
+  background-color: #E6E6FA;
+  -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+          border-radius: 6px;
+}
+  
+div.about {
+  padding: 10px 0 30px 0;
+  background-color: #E6E6FA;
+  -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+          border-radius: 6px;
+}
+  
+h2 {
+  font-size: 3em;
+  margin-top: 40px;
+  text-align: center;
+  letter-spacing: -2px;
+ }
+ 
+h3 {
+  font-size: 1.7em;
+  font-weight: 100;
+  margin-top: 30px;
+  text-align: center;
+  letter-spacing: -1px;
+  color: #999;
+}
+.form {
+  margin: 0 auto;
+  width: 210px;
+}
+
+.form label{
+  display: inline-block;
+  text-align: right;
+  float: left;
+}
+
+.form input{
+  display: inline-block;
+  text-align: left;
+  float: right;
+} 
+
+sign up with vaild
+
+<link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+<form class="row g-3">
+  <div class="col-md-5">
+    <label for="validationServer01" class="form-label">First name</label>
+    <input type="text" class="form-control" id="validationServer01"  required>
+    <div class="valid-feedback">
+   </div>
+  </div>
+  <div class="col-md-5">
+    <label for="validationServer02" class="form-label">Last name</label>
+    <input type="text" class="form-control" id="validationServer02"  required>
+    <div class="valid-feedback">
+    </div>
+  </div>
+  <div class="col-md-5">
+    <label for="validationServerUsername" class="form-label">Username</label>
+    <div class="input-group has-validation">
+      <span class="input-group-text" id="inputGroupPrepend3">@</span>
+      <input type="text" class="form-control " id="validationServerUsername" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
+      <div id="validationServerUsernameFeedback" class="invalid-feedback">
+        Please choose a username.
+      </div>
+    </div>
+  </div>
+  <div class="col-md-5">    
+    <label for="validationServerpassword" class="form-label">Password</label>
+      <div class="input-group has-validation">
+      <input type="text" class="form-control" id="validationServerpassword" aria-describedby="validationServerpasswordFeedback" required>
+      <div id="validationServerpasswordFeedback" class="invalid-feedback">
+      Please provide Password.
+    </div>
+  </div>
+  <div class="col-md-4">   
+    <div class="input-group has-validation">
+      <label for="validationServercpassword" class="form-label">Password</label>
+      <input type="text" name="Password" class="form-control" aria-describedby="validationServerpasswordFeedback" required>
+      Please confirm Password!.
+    </div>
+  </div>
+  </div><br><br><br>
+  <div class="col-12">
+      <center><button class="btn btn-primary" type="submit"><a class="nav-link"  type="submit" href="{{ url_for('login') }}"><font color="white" size="3">Sign Up</a></center>
+  </div>
+</form>
+
+
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  
+  <title> Quiz</title>
+  
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+
+<body>
+
+  <div id="page-wrap">
+
+    <h1>Final Quiz for Lip building</h1>
+    
+    <form action="grade.php" method="post" id="quiz">
+    
+            <ol>
+            
+                <li>
+                
+                    <h3>CSS Stands for...</h3>
+                    
+                    <div>
+                        <input type="radio" name="question-1-answers" id="question-1-answers-A" value="A" />
+                        <label for="question-1-answers-A">A) Computer Styled Sections </label>
+                    </div>
+                    
+                    <div>
+                        <input type="radio" name="question-1-answers" id="question-1-answers-B" value="B" />
+                        <label for="question-1-answers-B">B) Cascading Style Sheets</label>
+                    </div>
+                    
+                    <div>
+                        <input type="radio" name="question-1-answers" id="question-1-answers-C" value="C" />
+                        <label for="question-1-answers-C">C) Crazy Solid Shapes</label>
+                    </div>
+                    
+                    <div>
+                        <input type="radio" name="question-1-answers" id="question-1-answers-D" value="D" />
+                        <label for="question-1-answers-D">D) None of the above</label>
+                    </div>
+                
+                </li>
+                
+                <li>
+                
+                    <h3>Internet Explorer 6 was released in...</h3>
+                    
+                    <div>
+                        <input type="radio" name="question-2-answers" id="question-2-answers-A" value="A" />
+                        <label for="question-2-answers-A">A) 2001</label>
+                    </div>
+                    
+                    <div>
+                        <input type="radio" name="question-2-answers" id="question-2-answers-B" value="B" />
+                        <label for="question-2-answers-B">B) 1998</label>
+                    </div>
+                    
+                    <div>
+                        <input type="radio" name="question-2-answers" id="question-2-answers-C" value="C" />
+                        <label for="question-2-answers-C">C) 2006</label>
+                    </div>
+                    
+                    <div>
+                        <input type="radio" name="question-2-answers" id="question-2-answers-D" value="D" />
+                        <label for="question-2-answers-D">D) 2003</label>
+                    </div>
+                
+                </li>
+                
+                <li>
+                
+                    <h3>SEO Stand for...</h3>
+                    
+                    <div>
+                        <input type="radio" name="question-3-answers" id="question-3-answers-A" value="A" />
+                        <label for="question-3-answers-A">A) Secret Enterprise Organizations</label>
+                    </div>
+                    
+                    <div>
+                        <input type="radio" name="question-3-answers" id="question-3-answers-B" value="B" />
+                        <label for="question-3-answers-B">B) Special Endowment Opportunity</label>
+                    </div>
+                    
+                    <div>
+                        <input type="radio" name="question-3-answers" id="question-3-answers-C" value="C" />
+                        <label for="question-3-answers-C">C) Search Engine Optimization</label>
+                    </div>
+                    
+                    <div>
+                        <input type="radio" name="question-3-answers" id="question-3-answers-D" value="D" />
+                        <label for="question-3-answers-D">D) Seals End Olives</label>
+                    </div>
+                
+                </li>
+                
+                <li>
+                
+                    <h3>A 404 Error...</h3>
+                    
+                    <div>
+                        <input type="radio" name="question-4-answers" id="question-4-answers-A" value="A" />
+                        <label for="question-4-answers-A">A) is an HTTP Status Code meaning Page Not Found</label>
+                    </div>
+                    
+                    <div>
+                        <input type="radio" name="question-4-answers" id="question-4-answers-B" value="B" />
+                        <label for="question-4-answers-B">B) is a good excuse for a clever design</label>
+                    </div>
+                    
+                    <div>
+                        <input type="radio" name="question-4-answers" id="question-4-answers-C" value="C" />
+                        <label for="question-4-answers-C">C) should be monitored for in web analytics</label>
+                    </div>
+                    
+                    <div>
+                        <input type="radio" name="question-4-answers" id="question-4-answers-D" value="D" />
+                        <label for="question-4-answers-D">D) All of the above</label>
+                    </div>
+                
+                </li>
+                
+                <li>
+                
+                    <h3>Your favorite website is</h3>
+                    
+                    <div>
+                        <input type="radio" name="question-5-answers" id="question-5-answers-A" value="A" />
+                        <label for="question-5-answers-A">A) CSS-Tricks</label>
+                    </div>
+                    
+                    <div>
+                        <input type="radio" name="question-5-answers" id="question-5-answers-B" value="B" />
+                        <label for="question-5-answers-B">B) CSS-Tricks</label>
+                    </div>
+                    
+                    <div>
+                        <input type="radio" name="question-5-answers" id="question-5-answers-C" value="C" />
+                        <label for="question-5-answers-C">C) CSS-Tricks</label>
+                    </div>
+                    
+                    <div>
+                        <input type="radio" name="question-5-answers" id="question-5-answers-D" value="D" />
+                        <label for="question-5-answers-D">D) CSS-Tricks</label>
+                    </div>
+                
+                </li>
+            
+            </ol>
+            
+            <input type="submit" value="Submit Quiz" />
+    
+    </form>
+  
+  </div>
+  
+
+</body>
+
+</html>
+
+.vertical-menu {
+  width: 200px;
+  height: Full;
+}
+
+.vertical-menu a {
+  background-color: #eee;
+  color: black;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.vertical-menu a:hover {
+  background-color: #ccc;
+}
+
+.vertical-menu a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+
+
+
+#Convert the 0 into a number so we can add scores
+  score = 0
+  score = int(score)
+
+  #Ask user for their name
+  name = input("What is your name?")
+  name = name.title()
+  return("""Hello {}, welcome to Quiz night! 
+  You will be presented with 5 questions.
+  Enter the appropriate number to answer the question
+  Good luck!""".format(name))
+
+  #Question1
+  return("""What is the term for ‘Maori’ language?
+  1. Te Rex 
+  2. Hangi 
+  3. Hongu 
+  4. Te Reo""")
+
+  answer1 = "4"
+  response1 = input("Your answer is:")
+
+  if (response1 != answer1):
+      return("Sorry, that is incorrect!")
+  else:
+      return("Well done! " + response1 + " is correct!")
+      score = score + 1
+
+  return("Your current score is " + str(score) + " out of 5")
+
+  #Question2
+  return("""What is the Maori term for ‘tribe’ or ‘mob’?
+  1. Mihi 
+  2. Iwi 
+  3. Awi 
+  4. Hapu""")
+
+  answer2 = "2"
+  response2 = input("Your answer is:")
+
+  if (response2 != answer2):
+      return("Sorry, that is incorrect!")
+  else:
+      return("Well done! " + response2 + " is correct!")
+      score = score + 1
+
+  return("Your current score is " + str(score) + " out of 5")
+
+  #Question3
+  return("""What is the term for the formal welcome, where two individuals press their nose together?
+  1. Hongi 
+  2. Haka 
+  3. Hangi 
+  4. Huka""")
+
+  answer3 = "1"
+  response3 = input("Your answer is:")
+
+  if (response3 != answer3):
+      return("Sorry, that is incorrect!")
+  else:
+      return("Well done! " + response3 + " is correct!")
+      score = score + 1
+
+  return("Your current score is " + str(score) + " out of 5")
+
+  #Question4
+  return("""Who is the ‘demi-god’ or the ‘great creator’ who fished NZ out from the sea?
+  1. Zeus
+  2. Hercules
+  3. Maui
+  4. Maori""")
+
+  answer4 = "3"
+  response4 = input("Your answer is:")
+
+  if (response4 != answer4):
+      return("Sorry, that is incorrect!")
+  else:
+      return("Well done! " + response4 + " is correct!")
+      score = score + 1
+
+  return("Your current score is " + str(score) + " out of 5")
+
+  #Question5
+  return("""What is the name for the traditional Maori method of cooking?
+  1. Roast
+  2. Hangi
+  3. Hongi
+  4. Bake""")
+
+  answer5 = "2"
+  response5 = input("Your answer is:")
+
+  if (response5 != answer5):
+      return("Sorry, that is incorrect!")
+  else:
+      return("Well done! " + response5 + " is correct!")
+      score = score + 1
+  return("Your total score is " + str(score) + " out of 5")
+  return("Thank you for playing {}, goodbye!".format(name))

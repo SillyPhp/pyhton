@@ -1,0 +1,63 @@
+{%extends "layout.html"%}
+{% block content %}
+<head>  
+<div class="about">
+<img src="https://Source.unsplash.com/random/?nature" border="3"  height="475" width="300" align="Right"  >
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<title> Login Page </title>  
+<style>   
+Body {  
+  font-family: Times New Roman;  
+  background-color: None ;  
+  div {border-color: White;}
+}  
+button {   
+       background-color: #4CAF50;   
+       width: 50%;  
+        color: white;   
+        padding: 15px;   
+        margin: 10px 0px;   
+        border: none;   
+        cursor: pointer;   
+         }   
+ form {   
+        border: 3px solid #f1f1f1;   
+    }   
+ input[type=text], input[type=password] {   
+        width: 100%;   
+        margin: 8px 0;  
+        padding: 12px 20px;   
+        display: inline-block;   
+        border: 2px solid green;   
+        box-sizing: border-box;   
+    }  
+ button:hover {   
+        opacity: 0.7;   
+    }   
+  .cancelbtn {   
+        width: auto;   
+        padding: 10px 18px;  
+        margin: 10px 5px;  
+    }   
+        
+     
+ .container {   
+        padding: 50px;   
+        background-color: None;  
+    }  
+    } 
+</style>   
+</head>    
+<body> <br><br>
+ <center> <h1> Welcome To Website  </h1> </center>   
+    <form> 
+          
+        <div class="col-12"><br><br>
+          
+          <center><button type="submit" class="btn btn-primary"><a class="nav-link"  href="{{ url_for('admin') }}"><font color="white" size="5">Admin</button></a></center>
+          <center><button type="submit" class="btn btn-primary"><a class="nav-link"  href="{{ url_for('login') }}"><font color="white" size="5">Teacher</button></a></center>
+          </a></center>   <br><br>
+        </div>   
+    </form>  </body></html>
+    
+{%endblock%}

@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+<h1 style="text-align: center;"> {{q.subject}} </h1>
+
+
+<div class="" style="width: 60%; margin-left: 20%; margin-right: 20%; margin-top: 80px;">
+
+	<p>
+		{{q.q1}} <br>
+		{{q.q2}} <br>
+		{{q.q3}} <br>
+		{{q.q4}} <br>
+		{{q.q5}} <br>
+		{{q.q6}} <br>
+		{{q.q7}} <br>
+		{{q.q8}} <br>
+		{{q.q9}} <br>
+		{{q.q10}} <br>
+	</p>
+
+	<div>
+
+		<h3> ------------------------------------------------------------------------------------------------ </h3>
+
+
+		<table style="width: 100%;">
+			<tr>
+				<th>
+					Name
+				</th>
+				<th>
+					Roll No.
+				</th>
+				<th>
+					Score
+				</th>
+			</tr>
+			{% for i in ans %}
+			<tr>
+				<td>
+					{{i.name}}
+				</td>
+				<td>
+					{{i.rollno}}
+				</td>
+				<td>
+					{{i.score}}
+				</td>
+			</tr>
+			{% endfor %}
+		</table>
+
+
+		{% endblock %}

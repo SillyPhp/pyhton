@@ -1,0 +1,212 @@
+{%extends "layout.html"%}
+{% block content %}
+<style>
+div .container {
+  background-color: white;
+  width: 1000px;
+  align-self: center;
+  border: 10px black;
+  padding: 30px;
+  margin: 20px;
+}
+</style>
+<center>
+<div class="container">
+<div class="home"><br><br>
+<font color="20B2AA" size="14" face="arial"><center>Let's Quiz</center></font>
+<font color="grey" size="7" face="arial"><center>Test your skills and become a Master</center></font><br><br>
+<h4><center>We organizes Quiz Let's have a look by Login</center></h4>
+<br><h5><center>Sign-up if don't have account</center></h5><br>
+<div class="col-12">
+<center><button type="submit" class="btn btn-primary"><a class="nav-link"  href="{{ url_for('signup') }}"><font color="white" size="5" color="20B2AA">Sign in</button></a></center><br><br>
+</div></font>
+</div></div>
+
+
+<h1> {{info}} </h1>
+
+<div style="width: 60%; display: flex; margin-top: 50px;">
+  <div class="" style="width: 50%; border-radius: 5px; background-color: lightgrey; margin: 25px;">
+    <form action="{{url_for('login')}}" method="GET">
+      <br>
+      <h4 style="text-align: center;"> Create a New Quiz </h4>
+      <br>
+      <div style="text-align: center;">
+        
+        <button class="btn btn-primary">
+          Create Now
+        </button>
+
+      </div>
+      <br>
+      <br>
+    </form>
+  </div>
+  
+  <div class="" style=" width: 50%; border-radius: 5px; background-color: lightgrey; margin: 25px;">
+    <form action="{{url_for('login')}}" method="GET">
+      <br>
+      <h4 style="text-align: center;"> Check Results </h4>
+      <br>
+      <div style="text-align: center;">
+        
+        <button class="btn btn-primary">
+          Check Now
+        </button>
+
+      </div>
+      <br>
+      <br>
+    </form>
+  </div></a></button>
+
+</div>
+<br>
+<br>
+
+<!-- ANIMATED COLUMNS 
+================================================== -->
+
+<div class="row">
+  <div class="twelve columns">
+    <ul class="ca-menu">
+      <li>
+      <a href="#">
+      <span class="ca-icon"><i class="fa fa-heart"></i></span>
+      <div class="ca-content">
+        <h2 class="ca-main">Create<br/> Quiz</h2>
+        <h3 class="ca-sub">About all major subjects</h3>
+      </div>
+      </a>
+      </li>
+      <li>
+      <a href="#">
+      <span class="ca-icon"><i class="fa fa-bullhorn"></i></span>
+      <div class="ca-content">
+        <h2 class="ca-main">Share with<br/> Students</h2>
+        <h3 class="ca-sub">Straight to the point</h3>
+      </div>
+      </a>
+      </li>
+      <li>
+      <a href="#">
+      <span class="ca-icon"><i class="fa fa-user"></i></span>
+      <div class="ca-content">
+        <h2 class="ca-main">Check Their<br/> Response, Result</h2>
+        <h3 class="ca-sub">Answers by students</h3>
+      </div>
+      </a>
+      </li>
+      <li>
+      <a href="#">
+      <span class="ca-icon"><i class="fa fa-camera"></i></span>
+      <div class="ca-content">
+        <h2 class="ca-main">Keep The <br/> Records</h2>
+        <h3 class="ca-sub">with mySQL database</h3>
+      </div>
+      </a>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- CONTENT 
+================================================== -->
+
+
+<div class="row">
+  <div class="twelve columns">
+    <div class="centersectiontitle">
+      <h4>How to use</h4>
+    </div>
+  </div>
+  <div class="four columns">
+    <h5>Teachers</h5>
+    <p>
+      Create an account and login. after that you will be able to create a new quiz on this website and then you can share that quiz with your students and can also check their results.
+    </p>
+    <p>
+      <a href="#" class="readmore">Learn more</a>
+    </p>
+  </div>
+  <div class="four columns">
+    <h5>Students</h5>
+    <p>
+      You dont need to create an account all you need to do is when ever you recive the link of this website just open that link solve the quiz/exam and submit it.
+    </p>
+    <p>
+      <a href="#" class="readmore">Learn more</a>
+    </p>
+  </div>
+  <div class="four columns">
+    <h5>Principals</h5>
+    <p>
+      Principals need to login using special username and password, this will give them ability to check the work of all teachers and students in real time on this website.
+    </p>
+    <p>
+      <a href="#" class="readmore">Learn more</a>
+    </p>
+  </div>
+</div>
+<div class="hr">
+</div>
+<!-- TESTIMONIALS 
+================================================== -->
+
+<div class="container">
+<div class="row">
+  <div class="twelve columns">
+    <div id="testimonials">
+      <blockquote>
+        <p>
+           "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis." <cite>Martin - NY</cite>
+        </p>
+      </blockquote>
+
+    </div>
+    <!--end testimonials-->
+  </div>
+</div></div>
+
+<!-- FOOOTER 
+================================================== -->
+<div id="footer">
+  <footer class="row">
+  <p class="back-top floatright" style="margin-left: 50px;">
+    <a href="#top"><span></span></a>
+  </p>
+  <div class="four columns">
+    <h1>ABOUT US</h1>
+     Our goal is to keep clients satisfied!
+  </div>
+  <div class="four columns">
+    <h1>GET SOCIAL</h1>
+    <a class="social facebook" href="#"></a>
+    <a class="social twitter" href="#"></a>
+    <a class="social deviantart" href="#"></a>
+    <a class="social flickr" href="#"></a>
+    <a class="social dribbble" href="#"></a>
+  </div>
+  <div class="four columns">
+    <h1 class="newsmargin">NEWSLETTER</h1>
+    <div class="row collapse newsletter floatright">
+      <div class="ten mobile-three columns">
+        <input type="text" class="nomargin" placeholder="Enter your e-mail address...">
+      </div>
+      <div class="two mobile-one columns">
+        <a href="#" class="postfix button expand">GO</a>
+      </div>
+    </div>
+  </div>
+  </footer>
+</div>
+<div class="copyright">
+  <div class="row">
+    <div class="six columns">
+       &copy;<span class="small"> Copyright Your Agency Name</span>
+    </div>
+    
+  </div>
+</div>
+</center>
+
+{%endblock%}

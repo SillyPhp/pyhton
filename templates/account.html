@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+
+<div style="width: 60%; margin-right: 20%; margin-left: 20%; text-align: center;">
+	<img src="{{url_for('static',filename='Prof.png')}}">
+	<h1>Username : {{t.username}}</h1>
+	<br>
+	<h1>Password : {{t.password}}</h1>
+</div>
+
+<br>
+<h3 style="text-align: center;"> ---------------------------------------------------------</h3>
+<br>
+
+<h4 style=" margin-left: 20%; margin-right: 20%;"> Quizes created by you : </h4>
+
+<div id="teachers" style="">
+	<div  style="width: 60%; margin-left: 20%; margin-right: 20%; margin-top: 80px; text-align: center; display: flex; border: 1px solid grey; overflow-x: auto;">
+		{% for i in q %}
+		<div style="float: left; margin: 20px;">
+			<img src="{{url_for('static',filename='quiz.jpg')}}"> <br><br>
+			<a href="{{url_for('SubRes',uid=i.url_id)}}" style="font-size: 20px;"> {{i.subject}} </a>
+		</div>
+		{% endfor %}
+	</div>
+
+</div>
+
+
+
+{% endblock %}

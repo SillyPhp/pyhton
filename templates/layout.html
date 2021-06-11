@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Flask App</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="{{url_for('static',filename='css/style1.css')}}">
+    </head>
+
+
+<background color="DarkSeaGreen" face="Times New Roman">
+<style><br><br>
+body {
+  font-family: Times New Roman;
+
+}
+.navbar {
+  width: 100%;
+  background-color: #20B2AA;
+
+}
+
+.navbar a {
+  float: left;
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.navbar a:hover {
+  background-color: #20B2AA;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+</style>
+</head>
+
+<body>
+<div class="container-Fluid">
+<nav class="navbar navbar-light bg-light">
+<span class="navbar-brand mb-0 h1"><font size="8" color="#20B2AA">Online Quiz</span></font>
+<body style="background-color:#20B2AA;">
+<div class="navbar">
+  <font size="4">
+  <a class="active" href="{{ url_for('home') }}"><i class="fa fa-fw fa-home"></i> Home</a> 
+  <a href="{{ url_for('login1') }}"><i class="fa fa-fw fa-search"></i>Login</a> 
+  <a href="{{ url_for('contact') }}"><i class="fa fa-fw fa-envelope"></i> Contact-Us</a> 
+  <a href="{{ url_for('about') }}"><i class="fa fa-fw fa-user"></i>About-Us </a>
+  <a href="{{ url_for('logout') }}"><i class="fa fa-fw fa-user"></i>Logout </a>
+</div></font>
+</nav></div>
+ <div class="container">
+        {%block content%}
+        {%endblock%}
+  </body>
+</html>
+  

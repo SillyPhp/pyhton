@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang = "en">
+   <head></head>
+   <body>
+      
+      <h3>
+         <a href = "{{ url_for('show') }}">Comments</a>
+      </h3>
+      
+      <hr/>
+      {%- for message in get_flashed_messages() %}
+         {{ message }}
+      {%- endfor %}
+		
+      <h3>feedbacks (<a href = "{{ url_for('contact') }}">Add feedback
+         </a>)</h3>
+      
+      <table>
+         <thead>
+            <tr>
+               <th>fname</th>
+               <th>lname</th>
+               <th>email</th>
+               <th>comm</th>
+            </tr>
+         </thead>
+         
+         <tbody>
+            {% for feedback in feedbacks %}
+               <tr>
+                  <td>{{ feedback.fname }}</td>
+                  <td>{{ feedback.lname }}</td>
+                  <td>{{ feedback.email }}</td>
+                  <td>{{ feedback.comm }}</td>
+               </tr>
+            {% endfor %}
+         </tbody>
+      </table>
+      
+   </body>
+</html>

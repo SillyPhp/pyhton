@@ -1,0 +1,221 @@
+{%extends "layout.html"%}
+{% block content %}
+<head>
+<style>
+
+div .container {
+  background-color: white;
+  width: 1000px;
+  align-self: center;
+  border: 10px black;
+  padding: 30px;
+  margin: 20px;
+}
+</style>
+<div class="container">
+<form class="form-horizontal" action="{{request.path}}" method="POST">
+<fieldset>
+
+<!-- Form Name -->
+<center>
+<legend>MCQ Test</legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput" name ='name'>Teacher</label>  
+  <div class="col-md-4">
+  <input id="textinput" name="textinput" type="text" placeholder="Teacher name" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">course</label>  
+  <div class="col-md-4">
+  <input id="textinput" name="subject" type="text" placeholder="subject name" class="form-control input-md">
+    
+  </div>
+</div>
+</center>
+
+<form action="{{request.url}}" method="POST">
+  
+<h3>Question 1</h3>
+<input type="text" name="q1">
+<br>
+
+
+<div class="input-group">
+  <div class="input-group-text">
+    <input class="form-check-input mt-0" type="radio" value="1" name="q1o">
+  </div>
+  <input type="text" class="form-control" name="q1o1">
+</div>
+
+<div class="input-group">
+  <div class="input-group-text">
+    <input class="form-check-input mt-0" type="radio" value="2" name="q1o">
+  </div>
+  <input type="text" class="form-control" name="q1o2">
+</div>
+
+<div class="input-group">
+  <div class="input-group-text">
+    <input class="form-check-input mt-0" type="radio" value="3" name="q1o">
+  </div>
+  <input type="text" class="form-control" name="q1o3">
+
+<div class="input-group">
+  <div class="input-group-text">
+    <input class="form-check-input mt-0" type="radio" value="4" name="q1o">
+  </div>
+  <input type="text" class="form-control" name="q1o4">
+</div>
+</div>
+
+<h3>Question 2</h3>
+<input type="text" name="q2">
+<br>
+
+
+<div class="input-group">
+  <div class="input-group-text">
+    <input class="form-check-input mt-0" type="radio" value="1" name="q2o">
+  </div>
+  <input type="text" class="form-control" name="q2o1">
+</div>
+
+<div class="input-group">
+  <div class="input-group-text">
+    <input class="form-check-input mt-0" type="radio" value="2" name="q2o">
+  </div>
+  <input type="text" class="form-control" name="q2o2">
+</div>
+
+<div class="input-group">
+  <div class="input-group-text">
+    <input class="form-check-input mt-0" type="radio" value="3" name="q2o">
+  </div>
+  <input type="text" class="form-control" name="q2o3">
+
+<div class="input-group">
+  <div class="input-group-text">
+    <input class="form-check-input mt-0" type="radio" value="4" name="q2o">
+  </div>
+  <input type="text" class="form-control" name="q2o4">
+</div>
+</div>
+
+<h3>Question 3</h3>
+<input type="text" name="q3">
+<br>
+
+
+<div class="input-group">
+  <div class="input-group-text">
+    <input class="form-check-input mt-0" type="radio" value="1" name="q3o">
+  </div>
+  <input type="text" class="form-control" name="q3o1">
+</div>
+
+<div class="input-group">
+  <div class="input-group-text">
+    <input class="form-check-input mt-0" type="radio" value="2" name="q3o">
+  </div>
+  <input type="text" class="form-control" name="q3o2">
+</div>
+
+<div class="input-group">
+  <div class="input-group-text">
+    <input class="form-check-input mt-0" type="radio" value="3" name="q3o">
+  </div>
+  <input type="text" class="form-control" name="q3o3">
+
+<div class="input-group">
+  <div class="input-group-text">
+    <input class="form-check-input mt-0" type="radio" value="4" name="q3o">
+  </div>
+  <input type="text" class="form-control" name="q3o4">
+</div>
+</div>
+
+<h3>Question 4</h3>
+<input type="text" name="q4">
+<br>
+
+
+<div class="input-group">
+  <div class="input-group-text">
+    <input class="form-check-input mt-0" type="radio" value="1" name="q4o">
+  </div>
+  <input type="text" class="form-control" name="q4o1">
+</div>
+
+<div class="input-group">
+  <div class="input-group-text">
+    <input class="form-check-input mt-0" type="radio" value="2" name="q4o">
+  </div>
+  <input type="text" class="form-control" name="q4o2">
+</div>
+
+<div class="input-group">
+  <div class="input-group-text">
+    <input class="form-check-input mt-0" type="radio" value="3" name="q4o">
+  </div>
+  <input type="text" class="form-control" name="q4o3">
+
+<div class="input-group">
+  <div class="input-group-text">
+    <input class="form-check-input mt-0" type="radio" value="4" name="q4o">
+  </div>
+  <input type="text" class="form-control" name="q4o4">
+</div>
+</div>
+
+<h3>Question 5</h3>
+<input type="text" name="q5">
+<br>
+
+
+<div class="input-group">
+  <div class="input-group-text">
+    <input class="form-check-input mt-0" type="radio" value="1" name="q5o">
+  </div>
+  <input type="text" class="form-control" name="q5o1">
+</div>
+
+<div class="input-group">
+  <div class="input-group-text">
+    <input class="form-check-input mt-0" type="radio" value="2" name="q5o">
+  </div>
+  <input type="text" class="form-control" name="q5o2">
+</div>
+
+<div class="input-group">
+  <div class="input-group-text">
+    <input class="form-check-input mt-0" type="radio" value="3" name="q5o">
+  </div>
+  <input type="text" class="form-control" name="q5o3">
+
+<div class="input-group">
+  <div class="input-group-text">
+    <input class="form-check-input mt-0" type="radio" value="4" name="q5o">
+  </div>
+  <input type="text" class="form-control" name="q5o4">
+</div>
+</div>
+
+<div style="text-align: center;">
+  <button onclick="check()" class="btn btn-primary" style="width: 50%; ">
+    Create Quiz
+  </button>
+
+</div>
+
+
+
+</fieldset>
+</form>
+
+{%endblock%}

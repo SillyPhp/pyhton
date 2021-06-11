@@ -1,0 +1,100 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<script type="text/javascript">
+	
+	function work(){
+		let name = document.getElementById('name').value;
+		let pass = document.getElementById('pass').value;
+
+		const xhr = new XMLHttpRequest();
+		xhr.open('POST','/adminlog',true)
+		xhr.setRequestHeader('Content-type','application/json')
+		xhr.send(JSON.stringify({name:name,
+			pass:pass
+		})) 
+		console.log('Request send')
+
+		xhr.onreadystatechange = function() {
+			if (xhr.readyState == XMLHttpRequest.DONE){
+				let points  = xhr.responseText;
+				console.log(points);
+				setTimeout(lo, 1000);
+			}
+		}
+
+	}
+
+	function lo(){
+		window.location.reload();
+	}
+
+</script>
+<style>
+div .container {
+  background-color: lightgrey;
+  width: 900px;
+  align-self: center;
+  border: 10px black;
+  padding: 30px;
+  margin: 20px;
+}
+</style>
+{% if log == 0 %}
+<div class="container">
+<br>
+<h1 style="text-align: center; font: Times New Roman;"> Admin Login </h1>
+<br>
+<br>
+
+<div id="log" style="width: 60%; margin-left: 20%; margin-right: 20%; display: flex;">
+	<div style="float: left; width: 60%">
+		<form action="{{url_for('adminlog')}}" method="POST">
+			<h4> Name :  </h4>
+			<input type="text" name="name" id="name" style="border: 1px solid grey; width: 80%;">
+			<br><br>
+			<h4> Password : </h4>
+			<input type="password" name="pass" id="pass" style="border: 1px solid grey; width: 80%;">
+			<br><br><br>
+			<button type="submit" class="btn btn-primary" style="padding: 10px;">
+				Login
+			</button>
+		</form>
+	</div>
+	<div style="float: left; width: 20%;">
+		<img src="{{url_for('static',filename='/pics/prof.png')}}">
+	</div>
+</div>
+</div>
+<br>
+<br>
+<h1 id="er" style="color: red; display: none;">
+	Username and Password dose not match
+</h1>
+
+{% else %}
+
+<div id="teachers" style="">
+	<div>
+		<h1 style="text-align: center;">
+			Teachers
+		</h1>
+		
+
+		<div  style="width: 60%; margin-left: 20%; margin-right: 20%; margin-top: 80px; text-align: center; display: flex; border: 1px solid grey; overflow-x: auto;">
+			{% if t is defined %}
+			{% for i in t %}
+			<div style="float: left; margin: 20px;">
+				<img src="{{url_for('static',filename='face.png')}}"> <br><br>
+				<a href="{{url_for('adminQ',uname=i.username)}}" style="font-size: 20px;"> {{i.username}} </a>
+			</div>
+			{% endfor %}
+			{% endif %}
+		</div>
+
+	</div>
+</div>
+
+{% endif %}
+
+{% endblock %}
